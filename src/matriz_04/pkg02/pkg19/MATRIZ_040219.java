@@ -71,7 +71,7 @@ public class MATRIZ_040219 {
           StrMatriz[intCont][6]=strDep1;//Se Guarda en la Matriz
         }
         
-        System.out.println("              <Nombre>                 <Sue_Ba>                 <Tot_De>                 <Tot_Pe>                 <ISR>                           <Sue_Li>                   <Depart>");
+        System.out.println("              <Nombre>                 <Sue_Ba>                 <Tot_De>                 <Tot_Pe>                 <ISR>                           <Sue_Li>                  <Depart>");
         
         for(int intFila=0; intFila<10; intFila++){//Se muesta la Matriz
            for(int intColumna=0; intColumna<7; intColumna++){
