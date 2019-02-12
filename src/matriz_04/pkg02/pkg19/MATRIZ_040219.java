@@ -13,7 +13,7 @@ public class MATRIZ_040219 {
         StrMatriz = new String[10][7];//Le damos tamaño a la matriz.
         int intSuelBas=0, intTotDedu=0, intTotPer=0, intSuelLi1=0, intSuelLi2=0, intSuelLi3=0, intSuelLi4=0, intDep=0 ;//Declaramos unas variables tipo entero para los calculos con numeros.
         String strSuelBas1, strTotDedu1, strTotPer1, strSuelLi6, strDep1, strIRS2;//Declaramos unas variables String para poder mostrar
-        double  dblISR1=0, dblSuelLi4=0, dblSuelLi5=0;
+        double  dblISR1=0, dblSuelLi4=0, dblSuelLi5=0;//Declaramos variables tipo Double para la operaciones con punto decimal.
         System.out.println("Bienvenido!!!! INGRESO DE PLANILLA\n");
         
         for(int intCont=0; intCont<10; intCont++){//Pedimos los Nombres de los empleados
@@ -40,7 +40,7 @@ public class MATRIZ_040219 {
         }
         
         
-        for(int intCont=0; intCont<10; intCont++){
+        for(int intCont=0; intCont<10; intCont++){//Se usara if's para poder buscar en el suedlo base conforme a los rangos para sacarle su ISR
         intSuelLi1= Integer.parseInt(StrMatriz[intCont][1]);
         if(intSuelLi1<=5000){
         dblISR1= intSuelLi1*0.3;
@@ -51,8 +51,8 @@ public class MATRIZ_040219 {
         if(intSuelLi1>=10001&&intSuelLi1<=100000){
         dblISR1= intSuelLi1*0.10;
         }
-        strIRS2= String.valueOf((String.format("%.2f", dblISR1)));
-        StrMatriz[intCont][4]=strIRS2;
+        strIRS2= String.valueOf((String.format("%.2f", dblISR1)));//Se vuelve String la varible double y que este dando unicamente 2 decimales
+        StrMatriz[intCont][4]=strIRS2;//Se Guarda en la Matriz 
         }
         
         for(int intCont=0; intCont<10; intCont++){
@@ -61,7 +61,7 @@ public class MATRIZ_040219 {
           intSuelLi3= Integer.parseInt(StrMatriz[intCont][3]);
           dblSuelLi4= Double.parseDouble(StrMatriz[intCont][4]);//Se toman los valores en dichas posiciones de la matriz para tomar su dato y convertirlo a double
           dblSuelLi5= intSuelLi1-intSuelLi2+intSuelLi3-dblSuelLi4;//Con los datos tomados de las posiciones anteriores se usaran para este calculo y se guarda en una variable String
-          strSuelLi6= String.valueOf((String.format("%.2f", dblSuelLi5)));//Se vuelve String la varible double
+          strSuelLi6= String.valueOf((String.format("%.2f", dblSuelLi5)));//Se vuelve String la varible double y que este dando unicamente 2 decimales
           StrMatriz[intCont][5]=strSuelLi6;//Se Guarda en la Matriz 
         }
         
@@ -71,7 +71,7 @@ public class MATRIZ_040219 {
           StrMatriz[intCont][6]=strDep1;//Se Guarda en la Matriz
         }
         
-        System.out.println("              <Nombre>                 <Sue_Ba>                 <Tot_De>                 <Tot_Pe>                 <ISR>                 <Sue_Li>                       <Depart>");
+        System.out.println("              <Nombre>                 <Sue_Ba>                 <Tot_De>                 <Tot_Pe>                 <ISR>                           <Sue_Li>                   <Depart>");
         
         for(int intFila=0; intFila<10; intFila++){//Se muesta la Matriz
            for(int intColumna=0; intColumna<7; intColumna++){
