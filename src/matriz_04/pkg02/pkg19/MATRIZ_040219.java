@@ -1,3 +1,8 @@
+/*
+Jehú Daniel Moraga Galvez, 0901-17-3945
+Modificado el dia 12/02/09 a las 11:12 AM
+Programa de planilla.
+*/
 package matriz_04.pkg02.pkg19;
 
 import java.text.DecimalFormat;
