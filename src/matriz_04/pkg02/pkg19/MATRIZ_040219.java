@@ -1,9 +1,3 @@
-/*
-JEHU DANIEL MORAGA GALVEZ
-UNVIERSIDAD MARIANO GALVEZ DE GUATEMALA
-0901-17-3945
-19-02-2019 11:35 AM
-*/
 package matriz_04.pkg02.pkg19;
 
 import java.text.DecimalFormat;
